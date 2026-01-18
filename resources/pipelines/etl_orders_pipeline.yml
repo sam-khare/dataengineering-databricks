@@ -1,0 +1,14 @@
+id: 7b70b666-3787-49a6-9558-7e5ef6a3871a
+pipeline_type: WORKSPACE
+name: etl_orders_pipeline
+libraries:
+  - glob:
+      include: ../notebooks/dab_pipeline.sql
+schema: bronze
+continuous: false
+development: false
+photon: true
+channel: CURRENT
+catalog: dev
+serverless: true
+root_path: ../notebooks/dab_pipeline.sql

@@ -1,0 +1,17 @@
+resources:
+  jobs:
+    dab_first:
+      name: dab_first
+      tasks:
+        - task_key: dab_notebook
+          notebook_task:
+            notebook_path: ../notebooks/first_notebook.py
+            source: WORKSPACE
+          environment_key: Default
+      queue:
+        enabled: true
+      environments:
+        - environment_key: Default
+          spec:
+            environment_version: "4"
+      performance_target: PERFORMANCE_OPTIMIZED
