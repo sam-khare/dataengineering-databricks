@@ -1,0 +1,27 @@
+bundle:
+  name: DABfile
+
+
+include:
+  #include whatever we mentioned in resources yml file will be resembled here
+  - src/*.yml
+  - src/env/*.yml
+  - resources/jobs/*.yml
+  - resources/pipelines/*.yml
+  - resources/schemas/*.yml
+
+permissions:
+  - group_name: de_grp
+    level: CAN_MANAGE
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-283ac1e9-137f.cloud.databricks.com/editor/files/27751044665343?o=7474644740362813
+
+  qa:    
+    default: false
+    workspace:
+      host: https://dbc-283ac1e9-137f.cloud.databricks.com/editor/files/27751044665343?o=7474644740362813
